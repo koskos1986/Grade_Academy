@@ -1,0 +1,84 @@
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page {
+  min-height: 100%;
+  margin: 0;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 26px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  // text-transform: uppercase;
+  color: $black;
+  // background-color: $grey-body;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+// Подобрать под свою стилизацию
+/*.button {
+  line-height: 21px;
+  font-weight: bold;
+  border: none;
+  text-transform: uppercase;
+  outline: none;
+}*/
+
+// add to hover,focus
+
+.input {
+  border: 0;
+  outline: none;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+// или добавить text в разметку или создать mixin
+.text {
+  margin: 0;
+  padding: 0;
+}
+
+// Для оформления br
+/*.hidden {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}*/
