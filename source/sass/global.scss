@@ -29,15 +29,15 @@ img {
 }
 
 .page {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
   min-height: 100%;
   margin: 0;
   font-style: normal;
-  font-size: 14px;
-  line-height: 26px;
+  font-size: 16px;
+  line-height: 28px;
   font-family: "Montserrat", "Arial", sans-serif;
-  // text-transform: uppercase;
-  color: $black;
-  // background-color: $grey-body;
+  color: $primary-black;
 }
 
 .list {
