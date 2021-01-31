@@ -1,0 +1,148 @@
+.price {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+      margin-bottom: 125px;
+  }
+
+  @media (min-width: $desktop-width) {
+      flex-direction: row;
+      margin-bottom: 138px;
+      margin-top: -256px;
+  }
+}
+
+.price__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  margin-right: 10px;
+  margin-left: 10px;
+
+  @media (min-width: $desktop-width) {
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      margin-right: 65px;
+      margin-left: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+      position: relative;
+      justify-content: flex-start;
+      margin-right: 0;
+      margin-left: 0;
+      background-color: $white;
+      z-index: 2;
+  }
+}
+
+.price__list-item {
+  display: flex;
+  flex-direction: column;
+  width: 288px;
+  height: 629px;
+  margin-bottom: 30px;
+  padding: 30px 20px 0;
+  border: 1px solid rgba(44, 46, 63, 0.3);
+  border-radius: 6px;
+
+  @media (min-width: $desktop-width) {
+      width: 370px;
+      height: 672px;
+      margin-bottom: 0;
+      padding: 40px 30px 30px;
+  }
+}
+
+.prices__description {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.price__header {
+  position: relative;
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: $primary-black;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: $tablet-width) {
+      font-size: 30px;
+      line-height: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+      margin-bottom: 53px;
+      margin-left: 0;
+      padding-bottom: 20px;
+      border-bottom: 3px solid $primary-orange;
+      font-size: 55px;
+      line-height: 90px;
+  }
+}
+
+.price__text {
+  margin: 0;
+  margin-bottom: 20px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 16px;
+  color: $primary-black;
+  opacity: 0.7;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+      margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+      margin-bottom: 60px;
+      padding-right: 0;
+      padding-left: 0;
+      text-align: left;
+  }
+}
+
+.price__contact-text {
+  align-self: center;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: $primary-black;
+  font-weight: 500;
+  line-height: 34px;
+
+  @media (min-width: $desktop-width) {
+      margin-bottom: 13px;
+      font-size: 22px;
+  }
+}
+
+.price__icon-phone {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    position: absolute;
+    bottom: 5px;
+  }
+}

@@ -1,0 +1,37 @@
+.button {
+  display: block;
+  width: 288px;
+  height: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 30px;
+  padding-left: 40px;
+  color: $white;
+  background-color: $primary-orange;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 250px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 75px;
+    font-size: 12px;
+    line-height: 14.63px;
+    font-weight: 700;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &:hover,
+  &:focus {
+      background-color: $secondary-orange;
+  }
+}

@@ -1,0 +1,109 @@
+.form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mobile {
+    width: 90%;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.form__label {
+  position: relative;
+  width: 48.3%;
+  margin-right: 19px;
+  margin-bottom: 25px;
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  @include mobile {
+    width: 288px;
+    margin-bottom: 19px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &--phone {
+    &::before {
+      content: "+7";
+      display: block;
+      position: absolute;
+      top: 18px;
+      left: 26px;
+      width: 16px;
+      height: 14px;
+      font-size: 14px;
+      line-height: 17px;
+      color: $primary-black;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      width: 6px;
+      height: 6px;
+      background-image: url("../img/icon-star-number.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+
+    @include mobile {
+      margin-right: auto;
+    }
+  }
+}
+
+.form__input {
+  width: 269px;
+  border: 1px solid $text-dark-03;
+  padding: 16px 10px 15px 50px;
+  font-size: 14px;
+  line-height: 18px;
+  color: $primary-black;
+  outline: none;
+
+  @include mobile {
+    width: 288px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 17px;
+    color: $primary-black;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $text-dark-05;
+  }
+
+  &:active {
+      border-color: $text-dark-07;
+    }
+
+  &:invalid {
+    border-color: $primary-orange;
+  }
+
+  &:invalid + .form__error {
+    display: block;
+  }
+
+  &--email {
+    padding-left: 14px;
+  }
+}

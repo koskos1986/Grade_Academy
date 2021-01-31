@@ -1,0 +1,122 @@
+.price-card {
+  @media (min-width: $tablet-width) {
+    &:first-child {
+        margin-right: 50px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &:first-child {
+        margin-right: 30px;
+    }
+
+    &:last-child {
+        margin-right: 111px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $primary-orange;
+    border-width: 3px;
+
+    .price-card__header,
+    .price-card__price {
+        color: $primary-orange;
+    }
+
+    .price-card__text {
+        border-color: $primary-orange;
+    }
+  }
+}
+
+.price-card__header-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+
+  @media (min-width: $desktop-width) {
+      flex-direction: row;
+      margin-bottom: 40px;
+  }
+}
+
+.price-card__header {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: -1.27px;
+  color: rgba(20, 21, 23, 0.7);
+  text-align: center;
+
+  @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+      font-size: 28px;
+      line-height: 38px;
+      text-align: left;
+  }
+}
+
+.price-card__price {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 34px;
+  color: rgba(20, 21, 23, 0.7);
+}
+
+.price-card__text {
+  margin: 0;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(44, 46, 63, 0.3);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $primary-black;
+  text-align: center;
+
+  @media (min-width: $desktop-width) {
+      padding-bottom: 28px;
+      margin-bottom: 30px;
+      text-align: left;
+  }
+}
+
+.price-card__list {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  color: $primary-black;
+}
+
+.price-card__list-item {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 30px;
+
+  @media (min-width: $desktop-width) {
+      margin-bottom: 15px;
+  }
+}
+
+.price-card__icon {
+  position: absolute;
+  top: 12px;
+  left: 4px;
+}
+
+.price-card__button {
+  margin-top: auto;
+  width: inherit;
+  margin-left: -20px;
+
+  @media (min-width: $desktop-width) {
+      width: auto;
+      margin-left: 0;
+  }
+}
