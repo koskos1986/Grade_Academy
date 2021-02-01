@@ -13,14 +13,40 @@
   <link rel="preload" href="fonts/Montserrat-SemiBold.woff" as="font">
   <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font">
   <link rel="stylesheet" href="css/style.css">
+  <!-- Pixel Glass
+<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    /* Mobile layout by default */
+    background-image: url("img/320.png");
+  }
+  /* Tablet */
+  @media ( min-width: 768px ) {
+    HTML {
+      /* Tablet layout */
+      background-image: url("img/768.png");
+    }
+  }
+  /* Desktop */
+  @media ( min-width: 1024px ) {
+    HTML {
+      /* Desktop layout */
+      background-image: url("img/1024.png");
+    }
+  }
+</style>
+<link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+<script src="../node_modules/pixel-glass/script.js"></script>
+// Pixel Glass -->
 </head>
 <body class="page">
-  <header class="page__header header">
+  <header class="page__header header js-header">
     <div class="header__wrapper">
       <div class="header__top">
         <a class="header__logo">
           <svg width="57" height="22">
-            <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+            <use xlink:href="img/sprite.svg#icon-logo"></use>
           </svg>
         </a>
         <button class="button-burger js-button-open" type="button" aria-label="Открыть меню"></button>
@@ -28,7 +54,7 @@
       <div class="header__container header__container--nojs js-menu">
         <button class="button-cross js-button-close" type="button" aria-label="Закрыть меню"></button>
         <nav class="nav">
-          <ul class="nav__list">
+          <ul class="nav__list list">
             <li class="nav__item">
               <a class="nav__link" href="#places">О&nbsp;путешествии</a>
             </li>
@@ -40,7 +66,7 @@
         <div class="contact-us contact-us--header">
           <a class="contact-us__tel" href="tel:+749978468446">+7 (499) -784-684-46</a>
           <svg class="contact-us__icon-phone" width="30" height="30">
-            <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+            <use xlink:href="img/sprite.svg#icon-phone"></use>
           </svg>
         </div>
       </div>
@@ -68,7 +94,7 @@
     </nav>
     <div class="contact">
       <svg width="17" height="24" viewbox="0 0 17 24" fill="none">
-        <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+        <use xlink:href="img/sprite.svg#icon-phone"></use>
       </svg>
       <a href="tel:+749978468446" class="contact__number">+7 (499) -784-684-46</a>
     </div> -->
@@ -84,68 +110,90 @@
       </div>
     </section>
     <section class="places" id="places">
-      <h2 class="places__title title">Места посещения</h2>
-      <p class="places__text text">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
+      <div class="places__wrapper">
+        <h2 class="places__header title">Места посещения</h2>
+        <p class="places__text text">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
+      </div>
       <ul class="places__list list">
         <li class="places__list-item">
-          <picture>
-            <source type="image/webp" media="(min-width:1024px)" srcset="img/photo-greece-desktop@1x.webp 1x, img/photo-greece-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width:768px)" srcset="img/photo-greece-tablet@1x.webp 1x, img/photo-greece-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/photo-greece-mobile@1x.webp 1x, img/photo-greece-mobile@2x.webp 2x">
-            <source media="(min-width:1024px)" srcset="img/photo-greece-desktop@1x.jpg 1x, img/photo-greece-desktop@2x.jpg 2x">
-            <source media="(min-width:768px)" srcset="img/photo-greece-tablet@1x.jpg 1x, img/photo-greece-tablet@2x.jpg 2x">
-            <img src="img/photo-greece-mobile@1x.jpg" srcset="img/photo-greece-mobile@2x.jpg" width="288" height="425" alt="Дом на горе в Греции">
-          </picture>
-          <a href="">Греция</a>
-          <span>смотреть подробнее</span>
+          <div class="places__photo-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width:1024px)" srcset="img/photo-greece-desktop@1x.webp 1x, img/photo-greece-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width:768px)" srcset="img/photo-greece-tablet@1x.webp 1x, img/photo-greece-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-greece-mobile@1x.webp 1x, img/photo-greece-mobile@2x.webp 2x">
+              <source media="(min-width:1024px)" srcset="img/photo-greece-desktop@1x.jpg 1x, img/photo-greece-desktop@2x.jpg 2x">
+              <source media="(min-width:768px)" srcset="img/photo-greece-tablet@1x.jpg 1x, img/photo-greece-tablet@2x.jpg 2x">
+              <img src="img/photo-greece-mobile@1x.jpg" srcset="img/photo-greece-mobile@2x.jpg" width="288" height="425" alt="Дом на горе в Греции">
+            </picture>
+            <span class="places__title">Греция</span>
+            <a class="places__link" href="">
+              <span class="button button--places">смотреть подробнее</span>
+            </a>
+          </div>
         </li>
         <li class="places__list-item">
-          <picture>
-            <source type="image/webp" media="(min-width:1024px)" srcset="img/photo-albania-desktop@1x.webp 1x, img/photo-albania-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width:768px)" srcset="img/photo-albania-tablet@1x.webp 1x, img/photo-albania-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/photo-albania-mobile@1x.webp 1x, img/photo-albania-mobile@2x.webp 2x">
-            <source media="(min-width:1024px)" srcset="img/photo-albania-desktop@1x.jpg 1x, img/photo-albania-desktop@2x.jpg 2x">
-            <source media="(min-width:768px)" srcset="img/photo-albania-tablet@1x.jpg 1x, img/photo-albania-tablet@2x.jpg 2x">
-            <img src="img/photo-albania-mobile@1x.jpg" srcset="img/photo-albania-mobile@2x.jpg" width="288" height="425" alt="Вид сверху на пляж в Албании">
-          </picture>
-          <a href="">Албания</a>
-          <span>смотреть подробнее</span>
+          <div class="places__photo-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width:1024px)" srcset="img/photo-albania-desktop@1x.webp 1x, img/photo-albania-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width:768px)" srcset="img/photo-albania-tablet@1x.webp 1x, img/photo-albania-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-albania-mobile@1x.webp 1x, img/photo-albania-mobile@2x.webp 2x">
+              <source media="(min-width:1024px)" srcset="img/photo-albania-desktop@1x.jpg 1x, img/photo-albania-desktop@2x.jpg 2x">
+              <source media="(min-width:768px)" srcset="img/photo-albania-tablet@1x.jpg 1x, img/photo-albania-tablet@2x.jpg 2x">
+              <img src="img/photo-albania-mobile@1x.jpg" srcset="img/photo-albania-mobile@2x.jpg" width="288" height="425" alt="Вид сверху на пляж в Албании">
+            </picture>
+            <span class="places__title">Албания</span>
+            <a class="places__link" href="">
+              <span class="button button--places">смотреть подробнее</span>
+            </a>
+          </div>
         </li>
         <li class="places__list-item">
-          <picture>
-            <source type="image/webp" media="(min-width:1024px)" srcset="img/photo-macedonia-desktop@1x.webp 1x, img/photo-macedonia-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width:768px)" srcset="img/photo-macedonia-tablet@1x.webp 1x, img/photo-macedonia-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/photo-macedonia-mobile@1x.webp 1x, img/photo-macedonia-mobile@2x.webp 2x">
-            <source media="(min-width:1024px)" srcset="img/photo-macedonia-desktop@1x.jpg 1x, img/photo-macedonia-desktop@2x.jpg 2x">
-            <source media="(min-width:768px)" srcset="img/photo-macedonia-tablet@1x.jpg 1x, img/photo-macedonia-tablet@2x.jpg 2x">
-            <img src="img/photo-macedonia-mobile@1x.jpg" srcset="img/photo-macedonia-mobile@2x.jpg" width="288" height="425" alt="Вид на церковь у моря в Македонии">
-          </picture>
-          <a href="">Македония</a>
-          <span>смотреть подробнее</span>
+          <div class="places__photo-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width:1024px)" srcset="img/photo-macedonia-desktop@1x.webp 1x, img/photo-macedonia-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width:768px)" srcset="img/photo-macedonia-tablet@1x.webp 1x, img/photo-macedonia-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-macedonia-mobile@1x.webp 1x, img/photo-macedonia-mobile@2x.webp 2x">
+              <source media="(min-width:1024px)" srcset="img/photo-macedonia-desktop@1x.jpg 1x, img/photo-macedonia-desktop@2x.jpg 2x">
+              <source media="(min-width:768px)" srcset="img/photo-macedonia-tablet@1x.jpg 1x, img/photo-macedonia-tablet@2x.jpg 2x">
+              <img src="img/photo-macedonia-mobile@1x.jpg" srcset="img/photo-macedonia-mobile@2x.jpg" width="288" height="425" alt="Вид на церковь у моря в Македонии">
+            </picture>
+            <span class="places__title">Македония</span>
+            <a class="places__link" href="">
+              <span class="button button--places">смотреть подробнее</span>
+            </a>
+          </div>
         </li>
         <li class="places__list-item">
-          <picture>
-            <source type="image/webp" media="(min-width:1024px)" srcset="img/photo-montenegro-desktop@1x.webp 1x, img/photo-montenegro-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width:768px)" srcset="img/photo-montenegro-tablet@1x.webp 1x, img/photo-montenegro-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/photo-montenegro-mobile@1x.webp 1x, img/photo-montenegro-mobile@2x.webp 2x">
-            <source media="(min-width:1024px)" srcset="img/photo-montenegro-desktop@1x.jpg 1x, img/photo-montenegro-desktop@2x.jpg 2x">
-            <source media="(min-width:768px)" srcset="img/photo-montenegro-tablet@1x.jpg 1x, img/photo-montenegro-tablet@2x.jpg 2x">
-            <img src="img/photo-montenegro-mobile@1x.jpg" srcset="img/photo-montenegro-mobile@2x.jpg" width="288" height="425" alt="Вид сверху на реку и лес в Черногории">
-          </picture>
-          <a href="">Черногория</a>
-          <span>смотреть подробнее</span>
+          <div class="places__photo-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width:1024px)" srcset="img/photo-montenegro-desktop@1x.webp 1x, img/photo-montenegro-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width:768px)" srcset="img/photo-montenegro-tablet@1x.webp 1x, img/photo-montenegro-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-montenegro-mobile@1x.webp 1x, img/photo-montenegro-mobile@2x.webp 2x">
+              <source media="(min-width:1024px)" srcset="img/photo-montenegro-desktop@1x.jpg 1x, img/photo-montenegro-desktop@2x.jpg 2x">
+              <source media="(min-width:768px)" srcset="img/photo-montenegro-tablet@1x.jpg 1x, img/photo-montenegro-tablet@2x.jpg 2x">
+              <img src="img/photo-montenegro-mobile@1x.jpg" srcset="img/photo-montenegro-mobile@2x.jpg" width="288" height="425" alt="Вид сверху на реку и лес в Черногории">
+            </picture>
+            <span class="places__title">Черногория</span>
+            <a class="places__link" href="">
+              <span class="button button--places">смотреть подробнее</span>
+            </a>
+          </div>
         </li>
         <li class="places__list-item">
-          <picture>
-            <source type="image/webp" media="(min-width:1024px)" srcset="img/photo-croatia-desktop@1x.webp 1x, img/photo-croatia-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width:768px)" srcset="img/photo-croatia-tablet@1x.webp 1x, img/photo-croatia-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/photo-croatia-mobile@1x.webp 1x, img/photo-croatia-mobile@2x.webp 2x">
-            <source media="(min-width:1024px)" srcset="img/photo-croatia-desktop@1x.jpg 1x, img/photo-croatia-desktop@2x.jpg 2x">
-            <source media="(min-width:768px)" srcset="img/photo-croatia-tablet@1x.jpg 1x, img/photo-croatia-tablet@2x.jpg 2x">
-            <img src="img/photo-croatia-mobile@1x.jpg" srcset="img/photo-croatia-mobile@2x.jpg" width="288" height="425" alt="Вид пещеры в Хорватии">
-          </picture>
-          <a href="">Хорватия</a>
-          <span>смотреть подробнее</span>
+          <div class="places__photo-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width:1024px)" srcset="img/photo-croatia-desktop@1x.webp 1x, img/photo-croatia-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width:768px)" srcset="img/photo-croatia-tablet@1x.webp 1x, img/photo-croatia-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-croatia-mobile@1x.webp 1x, img/photo-croatia-mobile@2x.webp 2x">
+              <source media="(min-width:1024px)" srcset="img/photo-croatia-desktop@1x.jpg 1x, img/photo-croatia-desktop@2x.jpg 2x">
+              <source media="(min-width:768px)" srcset="img/photo-croatia-tablet@1x.jpg 1x, img/photo-croatia-tablet@2x.jpg 2x">
+              <img src="img/photo-croatia-mobile@1x.jpg" srcset="img/photo-croatia-mobile@2x.jpg" width="288" height="425" alt="Вид пещеры в Хорватии">
+            </picture>
+            <span class="places__title">Хорватия</span>
+            <a class="places__link" href="">
+              <span class="button button--places">смотреть подробнее</span>
+            </a>
+          </div>
         </li>
       </ul>
     </section>
@@ -153,19 +201,19 @@
       <h2 class="visually-hidden">Описания мест посещения</h2>
       <ul class="tabs__list list">
         <li class="tabs__list-item">
-          <a href="" class="tabs__list-link">Греция</a>
+          <a href="#" class="tabs__list-link">Греция</a>
         </li>
         <li class="tabs__list-item">
-          <a href="" class="tabs__list-link">Албания</a>
+          <a href="#" class="tabs__list-link">Албания</a>
         </li>
         <li class="tabs__list-item">
-          <a href="" class="tabs__list-link">Македония</a>
+          <a href="#" class="tabs__list-link">Македония</a>
         </li>
         <li class="tabs__list-item">
-          <a href="" class="tabs__list-link">Черногория</a>
+          <a href="#" class="tabs__list-link">Черногория</a>
         </li>
         <li class="tabs__list-item">
-          <a href="" class="tabs__list-link">Хорватия</a>
+          <a href="#" class="tabs__list-link">Хорватия</a>
         </li>
       </ul>
       <article class="tabs__card">
@@ -190,13 +238,13 @@
           <span class="tabs__review-author">Влада Голицина</span>
         </div>
       </article>
-      <article class="tabs__card">
+      <article class="tabs__card visually-hidden">
         <div class="tabs__description">
           <h3 class="tabs__description-title title">Албания</h3>
           <p class="tabs__description-text text">В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого состояния.</p>
           <button class="tabs__description-button button" type="button">купить тур сейчас</button>
         </div>
-        <div class="tabs__photo visually-hidden">
+        <div class="tabs__photo">
           <picture>
             <source type="image/webp" media="(min-width:1024px)" srcset="img/tab-albania-desktop@1x.webp 1x, img/tab-albania-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width:768px)" srcset="img/tab-albania-tablet@1x.webp 1x, img/tab-albania-tablet@2x.webp 2x">
@@ -208,17 +256,17 @@
         </div>
         <div class="tabs__review">
           <h3 class="tabs__review-title title">Отзывы</h3>
-          <p class="tabs__review-text text">Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с собой сестру, чтобы тоже смогла вкусить все красоты природы :)</p>
+          <p class="tabs__review-texvisually-hiddent text">Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с собой сестру, чтобы тоже смогла вкусить все красоты природы :)</p>
           <span class="tabs__review-author">Маришка</span>
         </div>
       </article>
-      <article class="tabs__card">
+      <article class="tabs__card visually-hidden">
         <div class="tabs__description">
           <h3 class="tabs__description-title title">Македония</h3>
           <p class="tabs__description-text text">В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев Камен где находится  археологический памятник Кокино в длину около 100 метров.</p>
           <button class="tabs__description-button button" type="button">купить тур сейчас</button>
         </div>
-        <div class="tabs__photo visually-hidden">
+        <div class="tabs__photo">
           <picture>
             <source type="image/webp" media="(min-width:1024px)" srcset="img/tab-macedonia-desktop@1x.webp 1x, img/tab-macedonia-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width:768px)" srcset="img/tab-macedonia-tablet@1x.webp 1x, img/tab-macedonia-tablet@2x.webp 2x">
@@ -234,13 +282,13 @@
           <span class="tabs__review-author">Михаил Кузьмин</span>
         </div>
       </article>
-      <article class="tabs__card">
+      <article class="tabs__card visually-hidden">
         <div class="tabs__description">
           <h3 class="tabs__description-title title">Черногория</h3>
           <p class="tabs__description-text text">Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км.</p>
           <button class="tabs__description-button button" type="button">купить тур сейчас</button>
         </div>
-        <div class="tabs__photo visually-hidden">
+        <div class="tabs__photo">
           <picture>
             <source type="image/webp" media="(min-width:1024px)" srcset="img/tab-montenegro-desktop@1x.webp 1x, img/tab-montenegro-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width:768px)" srcset="img/tab-montenegro-tablet@1x.webp 1x, img/tab-montenegro-tablet@2x.webp 2x">
@@ -256,13 +304,13 @@
           <span class="tabs__review-author">Анастасия Мей</span>
         </div>
       </article>
-      <article class="tabs__card">
+      <article class="tabs__card visually-hidden">
         <div class="tabs__description">
           <h3 class="tabs__description-title title">Хорватия</h3>
           <p class="tabs__description-text text">В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами —  сталактитами и сталагмитами —  формировавшимися тысячи и тысячи лет.</p>
           <button class="tabs__description-button button" type="button">купить тур сейчас</button>
         </div>
-        <div class="tabs__photo visually-hidden">
+        <div class="tabs__photo">
           <picture>
             <source type="image/webp" media="(min-width:1024px)" srcset="img/tab-croatia-desktop@1x.webp 1x, img/tab-croatia-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width:768px)" srcset="img/tab-croatia-tablet@1x.webp 1x, img/tab-croatia-tablet@2x.webp 2x">
@@ -290,22 +338,22 @@
           <ul class="price-card__list list">
             <li class="price-card__list-item">
               <svg class="price-card__icon" width="14" height="12" viewbox="0 0 14 12">
-                <use xlink:href="img/sprite_auto.svg#icon-check-black"></use>
+                <use xlink:href="img/sprite.svg#icon-check-black"></use>
             </svg>
               Разработанный маршрут с гидом группы</li>
             <li class="price-card__list-item">
               <svg class="price-card__icon" width="14" height="12" viewbox="0 0 14 12">
-                <use xlink:href="img/sprite_auto.svg#icon-check-black"></use>
+                <use xlink:href="img/sprite.svg#icon-check-black"></use>
             </svg>
               Перелет, трансфер и проживание в отелях</li>
             <li class="price-card__list-item">
               <svg class="price-card__icon" width="14" height="12" viewbox="0 0 14 12">
-                <use xlink:href="img/sprite_auto.svg#icon-check-black"></use>
+                <use xlink:href="img/sprite.svg#icon-check-black"></use>
             </svg>
               Завтраки, ужины в отелях и ланчи на природе</li>
             <li class="price-card__list-item">
               <svg class="price-card__icon" width="14" height="12" viewbox="0 0 14 12">
-                <use xlink:href="img/sprite_auto.svg#icon-check-black"></use>
+                <use xlink:href="img/sprite.svg#icon-check-black"></use>
             </svg>
               Экскурсии по удивительно красивым местам Европы</li>
           </ul>
@@ -320,31 +368,31 @@
           <ul class="price-card__list list">
             <li class="price-card__list-item">
               <svg class="price-card__icon" width="14" height="12" viewbox="0 0 14 12">
-                <use xlink:href="img/sprite_auto.svg#icon-check-red"></use>
+                <use xlink:href="img/sprite.svg#icon-check-red"></use>
             </svg>
               Разработанный маршрут с гидом группы
             </li>
             <li class="price-card__list-item">
               <svg class="price-card__icon" width="14" height="12" viewbox="0 0 14 12">
-                <use xlink:href="img/sprite_auto.svg#icon-check-red"></use>
+                <use xlink:href="img/sprite.svg#icon-check-red"></use>
             </svg>
               Перелет и трансфер
             </li>
             <li class="price-card__list-item">
               <svg class="price-card__icon" width="14" height="12" viewbox="0 0 14 12">
-                <use xlink:href="img/sprite_auto.svg#icon-check-red"></use>
+                <use xlink:href="img/sprite.svg#icon-check-red"></use>
             </svg>
               Проживание в хостелах при отелях
             </li>
             <li class="price-card__list-item">
               <svg class="price-card__icon" width="14" height="12" viewbox="0 0 14 12">
-                <use xlink:href="img/sprite_auto.svg#icon-check-red"></use>
+                <use xlink:href="img/sprite.svg#icon-check-red"></use>
             </svg>
               Только завтраки в отелях
             </li>
             <li class="price-card__list-item">
               <svg class="price-card__icon" width="14" height="12" viewbox="0 0 14 12">
-                <use xlink:href="img/sprite_auto.svg#icon-check-red"></use>
+                <use xlink:href="img/sprite.svg#icon-check-red"></use>
             </svg>
               Экскурсии по удивительно красивым местам Европы
             </li>
@@ -357,7 +405,7 @@
         <p class="price__text text">Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!</p>
         <span class="price__contact-text text">Свяжитесь с нами</span>
         <svg class="price__icon-phone" width="17" height="24" viewbox="0 0 17 24">
-          <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+          <use xlink:href="img/sprite.svg#icon-phone"></use>
       </svg>
         <a href="" class="price__contact-phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
       </div>
@@ -463,6 +511,6 @@
     <p class="success__text text">Форма успешно отправлена, спасибо! :)</p>
   </div>
 
-  <script src=""></script>
+  <script src="js/nav.js"></script>
 </body>
 </html>

@@ -1,0 +1,79 @@
+.contact-us {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 2px;
+
+  @include tablet {
+    display: none;
+  }
+
+  &--prices {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 0;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.contact-us__icon-phone {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  fill: none;
+  stroke: $primary-black;
+
+  &--prices {
+    top: 15px;
+    left: -6px;
+    stroke: $secondary-orange;
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.contact-us__tel {
+  width: 227px;
+  color: $primary-black;
+  font-size: 18px;
+  line-height: 32px;
+  text-decoration: underline;
+  padding-left: 39px;
+
+  &--prices {
+    width: 248px;
+    font-size: 20px;
+    line-height: 32px;
+    color: $primary-black;
+    padding-left: 44px;
+    text-decoration: none;
+
+    @include tablet {
+      width: 188px;
+      font-size: 18px;
+      text-align: center;
+      text-decoration: underline;
+      color: $primary-orange;
+      padding-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $primary-orange;
+  }
+
+  &:hover + .contact-us__icon-phone,
+  &:focus + .contact-us__icon-phone {
+    stroke: $primary-orange;
+  }
+}

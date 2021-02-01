@@ -13,7 +13,7 @@
   line-height: 14.63px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  border: none;
+  border: 0;
 
   cursor: pointer;
 
@@ -40,8 +40,10 @@
   display: none;
   position: relative;
   outline: none;
+  border: 0;
 
   @include tablet {
+    display: block;
     width: 72px;
     height: 50px;
     background-color: $primary-orange;
@@ -57,16 +59,19 @@
 }
 
 .button-cross {
+  display: none;
   position: relative;
   outline: none;
+  border: 0;
 
   @include tablet {
+    display: block;
     width: 72px;
     height: 50px;
     position: absolute;
     top: 0;
     right: 0;
-    background-image: url("../img/svg/icon-close.svg");
+    background-image: url("../img/icon-close.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -78,6 +83,30 @@
 
 .header__container--nojs > .button-cross {
   display: none;
+}
+
+
+.button--places {
+  width: 266px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.7);;
+    padding: 30px 23px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include tablet {
+      display: none;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: transparent;
+    }
+
 }
 
 /* .button {

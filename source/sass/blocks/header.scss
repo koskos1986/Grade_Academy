@@ -13,7 +13,7 @@
 }
 
 .header__wrapper {
-  width: 61%;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   margin-left: auto;
@@ -22,6 +22,7 @@
   @include tablet {
     width: 100%;
   }
+
 }
 
 .header__top {
@@ -65,7 +66,7 @@
       position: absolute;
       min-width: 320px;
       display: flex;
-      // background-color: $background-primary;
+      background-color: $form-background;
       padding-top: 50px;
       padding-bottom: 50px;
     }
@@ -80,9 +81,15 @@
 
 .header__logo {
   line-height: 0;
+  padding-left: 375px;
 
   @include tablet {
     margin-top: 4px;
+    padding-left: 21px;
+  }
+
+  @include mobile {
+    padding-left: 16px;
   }
 
   & svg {
