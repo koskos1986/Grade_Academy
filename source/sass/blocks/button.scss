@@ -1,6 +1,88 @@
 .button {
   display: block;
   width: 288px;
+  height: 75px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 30px;
+  padding-left: 40px;
+  color: $white;
+  background-color: $primary-orange;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14.63px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+
+  cursor: pointer;
+
+  @include tablet {
+    width: 250px;
+  }
+
+  @include mobile {
+    height: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  &:hover,
+  &:focus {
+      background-color: $secondary-orange;
+  }
+}
+
+.button-burger {
+  display: none;
+  position: relative;
+  outline: none;
+
+  @include tablet {
+    width: 72px;
+    height: 50px;
+    background-color: $primary-orange;
+    background-image: url("../img/icon-menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: auto;
+  }
+
+  @include mobile {
+    width: 50px;
+  }
+}
+
+.button-cross {
+  position: relative;
+  outline: none;
+
+  @include tablet {
+    width: 72px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url("../img/svg/icon-close.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include mobile {
+    width: 50px;
+  }
+}
+
+.header__container--nojs > .button-cross {
+  display: none;
+}
+
+/* .button {
+  display: block;
+  width: 288px;
   height: 50px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -34,4 +116,4 @@
   &:focus {
       background-color: $secondary-orange;
   }
-}
+} */

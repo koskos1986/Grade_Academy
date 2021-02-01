@@ -1,0 +1,110 @@
+.popup {
+  display: none;
+
+  &--open {
+    position: fixed;
+    width: 728px;
+    display: flex;
+    top: calc(50% - (445px / 2));
+    left: calc(50% - (728px / 2));
+    background-color: $form-background;
+    z-index: 15;
+
+    @include mobile {
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.popup__image {
+  width: 338px;
+  line-height: 0;
+
+  @include mobile {
+    display: none;
+  }
+
+  & img {
+    height: 100%;
+  }
+}
+
+.popup__wrapper {
+  position: relative;
+  width: 390px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 72px;
+  padding-left: 59px;
+  padding-right: 63px;
+  padding-bottom: 89px;
+
+  @include mobile {
+    width: 100%;
+    align-items: center;
+    padding-top: 100px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// .popup__lead {
+//   width: 100%;
+//   position: relative;
+// }
+
+.popup__close {
+  outline: none;
+  display: block;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-image: url("../img/icon-cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 20;
+
+  @include mobile {
+    top: 20px;
+    right: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+}
+
+.popup__header {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 43px;
+  text-align: center;
+  margin-bottom: 49px;
+  color: $mobile-menu-text;
+}
+
+// .overlay {
+//   display: none;
+//   width: 100%;
+//   height: 100%;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   z-index: 5;
+//   background-color: $color-text-dark-07;
+
+//   &--active {
+//     display: block;
+//   }
+// }
