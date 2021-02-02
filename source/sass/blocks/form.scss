@@ -65,6 +65,16 @@
   }
 }
 
+.form__error {
+  display: none;
+  position: absolute;
+  top: -15px;
+  left: 1px;
+  font-size: 12px;
+  line-height: 15px;
+  color: $primary;
+}
+
 .form__input {
   width: 269px;
   border: 1px solid $text-dark-03;

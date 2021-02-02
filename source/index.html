@@ -13,7 +13,7 @@
   <link rel="preload" href="fonts/Montserrat-SemiBold.woff" as="font">
   <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font">
   <link rel="stylesheet" href="css/style.css">
-  <!-- Pixel Glass
+  <!-- Pixel Glass -->
 <style>
   HTML {
     background-repeat: no-repeat;
@@ -38,7 +38,7 @@
 </style>
 <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
 <script src="../node_modules/pixel-glass/script.js"></script>
-// Pixel Glass -->
+<!-- Pixel Glass -->
 </head>
 <body class="page">
   <header class="page__header header js-header">
@@ -71,33 +71,6 @@
         </div>
       </div>
     </div>
-    <!-- <a href="" class="page__header-logo">
-      <svg>
-        <use></use>
-      </svg>
-    </a>
-    <nav class="menu menu--close menu--nojs">
-      <ul class="menu__list list">
-        <li class="menu__item">
-          <a href="" class="menu__link">О путешествии</a>
-        </li>
-        <li class="menu__item">
-          <a href="" class="menu__link">Цены</a>
-        </li>
-      </ul>
-      <button class="menu__toggle menu__toggle--close button-close" type="button">
-        <svg>
-          <use></use>
-        </svg>
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-    </nav>
-    <div class="contact">
-      <svg width="17" height="24" viewbox="0 0 17 24" fill="none">
-        <use xlink:href="img/sprite.svg#icon-phone"></use>
-      </svg>
-      <a href="tel:+749978468446" class="contact__number">+7 (499) -784-684-46</a>
-    </div> -->
   </header>
   <main class="page__main">
     <section class="greetings">
@@ -150,7 +123,7 @@
         <li class="places__list-item">
           <div class="places__photo-wrapper">
             <picture>
-              <source type="image/webp" media="(min-width:1024px)" srcset="img/photo-macedonia-desktop@1x.webp 1x, img/photo-macedonia-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width:1024px)" srcset="img/photo-maсedonia-desktop@1x.webp 1x, img/photo-maсedonia-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width:768px)" srcset="img/photo-macedonia-tablet@1x.webp 1x, img/photo-macedonia-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/photo-macedonia-mobile@1x.webp 1x, img/photo-macedonia-mobile@2x.webp 2x">
               <source media="(min-width:1024px)" srcset="img/photo-macedonia-desktop@1x.jpg 1x, img/photo-macedonia-desktop@2x.jpg 2x">
@@ -234,8 +207,16 @@
         </div>
         <div class="tabs__review">
           <h3 class="tabs__review-title title">Отзывы</h3>
-          <p class="tabs__review-text text">Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света! </p>
-          <span class="tabs__review-author">Влада Голицина</span>
+          <blockquote class="tabs__review-item">
+            <p class="tabs__review-text text">Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света! </p>
+            <div class="tabs__author">
+              <picture>
+                <source type="image/webp" srcset="img/png/photo-feedback.webp">
+                <img src="img/png/photo-feedback.png" loading="lazy" alt="Фото автора">
+              </picture>
+              <cite class="tabs__name-author">Влада Голицина</cite>
+            </div>
+          </blockquote>
         </div>
       </article>
       <article class="tabs__card visually-hidden">
@@ -254,10 +235,18 @@
             <img src="img/tab-albania-mobile@1x.jpg" srcset="img/tab-albania-mobile@2x.jpg" width="320" height="415" alt="Вид сверху на пляж в Албании">
           </picture>
         </div>
-        <div class="tabs__review">
+        <div class="tabs__review visually-hidden">
           <h3 class="tabs__review-title title">Отзывы</h3>
-          <p class="tabs__review-texvisually-hiddent text">Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с собой сестру, чтобы тоже смогла вкусить все красоты природы :)</p>
-          <span class="tabs__review-author">Маришка</span>
+          <blockquote class="tabs__review-item">
+            <p class="tabs__review-text text">Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с собой сестру, чтобы тоже смогла вкусить все красоты природы :)</p>
+            <div class="tabs__author">
+              <picture>
+                <source type="image/webp" srcset="img/png/photo-feedback.webp">
+                <img src="img/png/photo-feedback.png" loading="lazy" alt="Фото автора">
+              </picture>
+              <cite class="tabs__name-author">Маришка</cite>
+            </div>
+          </blockquote>
         </div>
       </article>
       <article class="tabs__card visually-hidden">
@@ -270,16 +259,24 @@
           <picture>
             <source type="image/webp" media="(min-width:1024px)" srcset="img/tab-macedonia-desktop@1x.webp 1x, img/tab-macedonia-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width:768px)" srcset="img/tab-macedonia-tablet@1x.webp 1x, img/tab-macedonia-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/tab-macedonia-webp@1x.webp 1x, img/tab-macedonia-webp@2x.webp 2x">
+            <source type="image/webp" srcset="img/tab-macedonia-mobile@1x.webp 1x, img/tab-macedonia-mobile@2x.webp 2x">
             <source media="(min-width:1024px)" srcset="img/tab-macedonia-desktop@1x.jpg 1x, img/tab-macedonia-desktop@2x.jpg 2x">
             <source media="(min-width:768px)" srcset="img/tab-macedonia-tablet@1x.jpg 1x, img/tab-macedonia-tablet@2x.jpg 2x">
             <img src="img/tab-macedonia-mobile@1x.jpg" srcset="img/tab-macedonia-mobile@2x.jpg" width="320" height="415" alt="Вид на церковь у моря в Македонии">
           </picture>
         </div>
-        <div class="tabs__review">
+        <div class="tabs__review visually-hidden">
           <h3 class="tabs__review-title title">Отзывы</h3>
-          <p class="tabs__review-text text">Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в гору был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила, особенно после долгого пути в гору.</p>
-          <span class="tabs__review-author">Михаил Кузьмин</span>
+          <blockquote class="tabs__review-item">
+            <p class="tabs__review-text text">Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в гору был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила, особенно после долгого пути в гору.</p>
+            <div class="tabs__author">
+              <picture>
+                <source type="image/webp" srcset="img/png/photo-feedback.webp">
+                <img src="img/png/photo-feedback.png" loading="lazy" alt="Фото автора">
+              </picture>
+              <cite class="tabs__name-author">Михаил Кузьмин</cite>
+            </div>
+          </blockquote>
         </div>
       </article>
       <article class="tabs__card visually-hidden">
@@ -298,10 +295,18 @@
             <img src="img/tab-montenegro-mobile@1x.jpg" srcset="img/tab-montenegro-mobile@2x.jpg" width="320" height="415" alt="Вид сверху на реку и лес в Черногории">
           </picture>
         </div>
-        <div class="tabs__review">
+        <div class="tabs__review visually-hidden">
           <h3 class="tabs__review-title title">Отзывы</h3>
-          <p class="tabs__review-text text">Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в фильмах :) Всем советую</p>
-          <span class="tabs__review-author">Анастасия Мей</span>
+          <blockquote class="tabs__review-item">
+            <p class="tabs__review-text text">Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в фильмах :) Всем советую</p>
+            <div class="tabs__author">
+              <picture>
+                <source type="image/webp" srcset="img/png/photo-feedback.webp">
+                <img src="img/png/photo-feedback.png" loading="lazy" alt="Фото автора">
+              </picture>
+              <cite class="tabs__name-author">Анастасия Мей</cite>
+            </div>
+          </blockquote>
         </div>
       </article>
       <article class="tabs__card visually-hidden">
@@ -320,10 +325,18 @@
             <img src="img/tab-croatia-mobile@1x.jpg" srcset="img/tab-croatia-mobile@2x.jpg" width="320" height="415" alt="Вид пещеры в Хорватии">
           </picture>
         </div>
-        <div class="tabs__review">
+        <div class="tabs__review visually-hidden">
           <h3 class="tabs__review-title title">Отзывы</h3>
-          <p class="tabs__review-text text">Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема! А то, что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни с чем не спутать по итогу :)</p>
-          <span class="tabs__review-author">Владимир Мулицин</span>
+          <blockquote class="tabs__review-item">
+            <p class="tabs__review-text text">Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема! А то, что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни с чем не спутать по итогу :)</p>
+            <div class="tabs__author">
+              <picture>
+                <source type="image/webp" srcset="img/png/photo-feedback.webp">
+                <img src="img/png/photo-feedback.png" loading="lazy" alt="Фото автора">
+              </picture>
+              <cite class="tabs__name-author">Владимир Муцилин</cite>
+            </div>
+          </blockquote>
         </div>
       </article>
     </section>
@@ -407,7 +420,7 @@
         <svg class="price__icon-phone" width="17" height="24" viewbox="0 0 17 24">
           <use xlink:href="img/sprite.svg#icon-phone"></use>
       </svg>
-        <a href="" class="price__contact-phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
+        <a class="price__contact-phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
       </div>
     </section>
     <section class="feedback">
@@ -426,9 +439,11 @@
           <form action="https://echo.htmlacademy.ru" method="get" class="feedback__form form">
             <label class="form__label form__label--phone" for="mobile" aria-label="Введите номер мобильного телефона">
               <input class="form__input" id="mobile" type="text" placeholder="Введите 10 цифр номера" required>
+              <span class="form__error">Данные не верны</span>
             </label>
             <label class="form__label" for="email" aria-label="Введите e-mail">
               <input class="form__input form__input--email" id="email" type="text" placeholder="E-mail">
+              <span class="form__error">Данные не верны</span>
             </label>
             <button class="form__button button" type="submit">отправить</button>
           </form>
@@ -465,12 +480,12 @@
     </section>
     <section class="footer__contacts contacts">
       <h2 class="contacts__header footer__header title">Наши контакты</h2>
-      <svg class="contacts__mail-icon">
-        <use></use>
+      <svg class="contacts__mail-icon"  width="26" height="20">
+        <use xlink:href="img/sprite.svg#icon-email"></use>
       </svg>
-      <a href="" class="contacts__mail" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
-      <svg class="contacts__phone-icon">
-        <use></use>
+      <a class="contacts__mail" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+      <svg class="contacts__phone-icon" width="30" height="30">
+        <use xlink:href="img/sprite.svg#icon-phone"></use>
       </svg>
       <a href="tel:+749978468446" class="contacts__phone">+7 (499) -784-684-46</a>
     </section>
@@ -505,7 +520,7 @@
   <div class="success visually-hidden">
     <button class="success__button button-close">
       <svg class="success__close-icon" width="30" height="30" viewbox="0 0 30 30">
-        <use xlink:href="img/sprite-auto.svg#icon-close"></use>
+        <use xlink:href="img/sprite.svg#icon-close"></use>
       </svg>
     </button>
     <p class="success__text text">Форма успешно отправлена, спасибо! :)</p>

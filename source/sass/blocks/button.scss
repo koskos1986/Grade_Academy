@@ -3,14 +3,14 @@
   width: 288px;
   height: 75px;
   padding-top: 30px;
-  padding-bottom: 30px;
   padding-right: 30px;
+  padding-bottom: 30px;
   padding-left: 40px;
   color: $white;
   background-color: $primary-orange;
   font-size: 12px;
-  font-weight: 700;
-  line-height: 14.63px;
+  font-weight: $bold;
+  line-height: 15px;
   letter-spacing: 2px;
   text-transform: uppercase;
   border: 0;
@@ -88,25 +88,24 @@
 
 .button--places {
   width: 266px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
+  font-weight: $medium;
+  font-size: 14px;
+  line-height: 17px;
+  background-color: transparent;
+  border: 1px solid $border-button;
+  padding: 30px 23px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include tablet {
+    display: none;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
     background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.7);;
-    padding: 30px 23px;
-    margin-left: auto;
-    margin-right: auto;
-
-    @include tablet {
-      display: none;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: transparent;
-    }
-
+  }
 }
 
 /* .button {

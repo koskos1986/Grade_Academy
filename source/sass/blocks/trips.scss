@@ -2,13 +2,13 @@
   width: 100%;
   padding-bottom: 20px;
   margin-bottom: 30px;
-  border-bottom: 1px solid #D7D9DF;
+  border-bottom: 1px solid $border-line;
 
   @media (min-width: $tablet-width) {
     width: auto;
     padding-bottom: 0;
     margin-bottom: 0;
-    border-right: 1px solid #D7D9DF;
+    border-right: 1px solid $border-line;
     border-bottom: none;
   }
 }

@@ -250,52 +250,50 @@
 }
 
 .greetings__title {
-  // @include style-reset;
-  font-weight: 600;
+  margin-bottom: 29px;
+  font-weight: $semi-bold;
   font-size: 55px;
   line-height: 80px;
   letter-spacing: -1.10667px;
   color: $white;
-  margin-bottom: 29px;
 
   @include tablet {
-    font-weight: 600;
+    margin-bottom: 15px;
+    font-weight: $semi-bold;
     font-size: 30px;
     line-height: 45px;
     letter-spacing: normal;
-    margin-bottom: 15px;
     text-align: center;
   }
 
   @include mobile {
     width: 217px;
-    font-size: 24px;
-    line-height: 36px;
-    text-align: center;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 0;
     padding-left: 6px;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
   }
 }
 
 .greetings__text {
-  // @include style-reset;
-  font-size: 16px;
+  margin-bottom: 33px;
+  font-size: $font-size;
   line-height: 27px;
   color: $white;
-  letter-spacing: -0.466667px;
-  margin-bottom: 33px;
+  letter-spacing: -0.467px;
 
   @include tablet {
+    margin-bottom: 10px;
     line-height: 27px;
     text-align: center;
-    margin-bottom: 10px;
   }
 
   @include mobile {
-    color: $primary-black;
     margin-bottom: 20px;
+    color: $primary-black;
   }
 }
 

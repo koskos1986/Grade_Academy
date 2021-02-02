@@ -10,11 +10,11 @@
   }
 }
 
-@mixin tablet-min {
-  @media (max-width: $tablet-width) {
-    @content;
-  }
-}
+// @mixin tablet-min {
+//   @media (max-width: $tablet-width) {
+//     @content;
+//   }
+// }
 
 @mixin desktop {
   @media (min-width: $desktop-width) {
@@ -23,7 +23,7 @@
 }
 
 @mixin retina {
-  @media (min-resolution: $retina-x2) {
+  @media (min-resolution: $retina-2x) {
     @content;
   }
 }

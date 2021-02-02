@@ -43,10 +43,10 @@
 
 .places__header {
   width: 328px;
-  font-weight: 600;
+  font-weight: $semi-bold;
   font-size: 55px;
   line-height: 80px;
-  letter-spacing: -1.245px;
+  letter-spacing: -1.25px;
   color: $primary-black;
   margin-bottom: 31px;
 
@@ -80,8 +80,8 @@
 }
 
 .places__text {
-  font-size: 16px;
-  line-height: 28px;
+  font-size: $font-size;
+  line-height: $line-height;
   letter-spacing: -0.47px;
 
   @include tablet {
@@ -156,14 +156,14 @@
   bottom: 0;
   left: 68px;
   width: 215px;
+  padding: 16px 30px;
   text-align: center;
-  font-weight: 500;
+  font-weight: $medium;
   font-size: 24px;
   line-height: 29px;
   letter-spacing: -0.415px;
   color: $primary-black;
   background-color: $white;
-  padding: 16px 30px;
 
   @include tablet {
     left: 36px;

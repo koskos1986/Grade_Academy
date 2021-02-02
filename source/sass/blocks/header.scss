@@ -13,7 +13,7 @@
 }
 
 .header__wrapper {
-  width: 90%;
+  width: 61%;
   display: flex;
   flex-wrap: wrap;
   margin-left: auto;
@@ -35,13 +35,13 @@
   @include tablet {
     width: 100%;
     min-height: 50px;
-    // padding-left: $padding-tablet;
+    padding-left: $padding-tablet;
     padding-bottom: 0;
     margin-right: 0;
   }
 
   @include mobile {
-    // padding-left: $padding-mobile;
+    padding-left: $padding-mobile;
   }
 }
 
@@ -81,15 +81,10 @@
 
 .header__logo {
   line-height: 0;
-  padding-left: 375px;
+  // padding-left: 375px;
 
   @include tablet {
     margin-top: 4px;
-    padding-left: 21px;
-  }
-
-  @include mobile {
-    padding-left: 16px;
   }
 
   & svg {

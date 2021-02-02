@@ -2,7 +2,7 @@
 $mobile-width: 767px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
-$retina-x2: 2dppx;
+$retina-2x: 2dppx;
 
 // Colors
 $primary-orange: #FE7865;
@@ -20,5 +20,18 @@ $text-dark-07: rgba(44, 46, 63, 0.7);
 $text-dark-05: rgba(44, 46, 63, 0.5);
 $text-dark-03: rgba(44, 46, 63, 0.3);
 $mobile-menu-text: #48494D;
+$border-button: rgba(255, 255, 255, 0.7);
+$border-line: #D7D9DF;
 
 // Margins & Paddings
+$padding-desktop: 375px;
+$padding-tablet: 21px;
+$padding-mobile: 16px;
+
+// fonts
+$font-size: 16px;
+$line-height: 28px;
+$bold: 700;
+$semi-bold: 600;
+$medium: 500;
+$regular: 400;
