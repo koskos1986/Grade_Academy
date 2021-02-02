@@ -1,122 +1,197 @@
 .price-card {
-  @media (min-width: $tablet-width) {
-    &:first-child {
-        margin-right: 50px;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    &:first-child {
-        margin-right: 30px;
-    }
-
-    &:last-child {
-        margin-right: 111px;
-    }
-  }
-
-  &:hover,
-  &:focus {
-    border-color: $primary-orange;
-    border-width: 3px;
-
-    .price-card__header,
-    .price-card__price {
-        color: $primary-orange;
-    }
-
-    .price-card__text {
-        border-color: $primary-orange;
-    }
-  }
-}
-
-.price-card__header-wrapper {
+  position: relative;
+  width: 370px;
+  min-height: 675px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  border: 1px solid text-dark-03;
+  border-radius: 6px;
+  padding-top: 44px;
+  padding-left: 28px;
+  padding-right: 29px;
+  padding-bottom: 29px;
 
-  @media (min-width: $desktop-width) {
-      flex-direction: row;
-      margin-bottom: 40px;
+  @media (max-width: 1200px) {
+    width: 330px;
+  }
+
+  @include tablet {
+    width: 288px;
+    min-height: 630px;
+    padding-top: 32px;
+    padding-left: 19px;
+    padding-right: 20px;
+    border-radius: 6px 6px 0 0;
+
+    @include mobile {
+      min-height: 627px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 29px;
+    }
+  }
+
+  &--complex {
+    margin-right: 36px;
+    padding-left: 35px;
+
+    @include tablet {
+      margin-right: 49px;
+      padding-left: 22px;
+    }
+
+    @include mobile {
+      min-height: 617px;
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 }
 
-.price-card__header {
-  margin: 0;
-  margin-bottom: 10px;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 34px;
-  letter-spacing: -1.27px;
-  color: rgba(20, 21, 23, 0.7);
-  text-align: center;
+.price-card__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 38px;
 
-  @media (min-width: $desktop-width) {
-      margin-bottom: 0;
-      font-size: 28px;
-      line-height: 38px;
-      text-align: left;
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+}
+
+.price-card__title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  color: $text-dark-05;
+
+  @include tablet {
+    font-size: 24px;
+    line-height: 38px;
+    text-align: center;
+    margin-bottom: 7px;
+  }
+
+  &--economy {
+  letter-spacing: -1.27px;
   }
 }
 
 .price-card__price {
-  font-weight: 700;
+  font-weight: $bold;
   font-size: 25px;
   line-height: 34px;
-  color: rgba(20, 21, 23, 0.7);
+  text-align: center;
+  color: $text-dark-05;
+
+  @include tablet {
+    padding-right: 5px;
+  }
 }
 
 .price-card__text {
-  margin: 0;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(44, 46, 63, 0.3);
-  font-weight: 400;
-  font-size: 16px;
   line-height: 24px;
+  padding-right: 19px;
+  margin-bottom: 27px;
   color: $primary-black;
-  text-align: center;
 
-  @media (min-width: $desktop-width) {
-      padding-bottom: 28px;
-      margin-bottom: 30px;
-      text-align: left;
+  @include tablet {
+    text-align: center;
+    padding-right: 0;
+    margin-bottom: 8px;
   }
 }
 
 .price-card__list {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 32px;
-  color: $primary-black;
+  width: 100%;
+  min-height: 321px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-top: 1px solid $primary-orange;
+  padding-top: 31px;
+
+  @include tablet {
+    padding-top: 21px;
+  }
 }
 
-.price-card__list-item {
+.price-card__item {
   position: relative;
-  margin-bottom: 10px;
   padding-left: 30px;
+  margin-bottom: 15px;
 
-  @media (min-width: $desktop-width) {
-      margin-bottom: 15px;
+  @include tablet {
+    margin-bottom: 10px;
+  }
+
+  @include mobile {
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--second {
+    margin-top: -9px;
+
+    @include tablet {
+      margin-top: -5px;
+    }
   }
 }
 
 .price-card__icon {
   position: absolute;
-  top: 12px;
-  left: 4px;
+  top: 10px;
+  left: 1px;
+  fill: $primary-orange;
 }
 
-.price-card__button {
-  margin-top: auto;
-  width: inherit;
-  margin-left: -20px;
+.price-card__item-text {
+  line-height: 32px;
+  color: $primary-black;
+}
 
-  @media (min-width: $desktop-width) {
-      width: auto;
-      margin-left: 0;
+.price-card:hover {
+  border: 3px solid $primary-orange;
+  padding-top: 42px;
+  padding-left: 26px;
+  padding-right: 27px;
+  padding-bottom: 27px;
+
+  @include tablet-min {
+    padding-top: 28px;
+    padding-right: 18px;
+    padding-left: 17px;
+    padding-bottom: 28px;
+  }
+
+  & .button--card {
+    @include tablet-min {
+      bottom: -4px;
+      left: -2px;
+    }
+  }
+
+  & .price-card__price {
+    color: $primary-black;
+  }
+
+  & .price-card__title {
+    letter-spacing: normal;
+    color: $primary-black;
+  }
+
+  & .price-card__list {
+    border-color: rgba(254, 120, 101, 1);
+  }
+
+  & .price-card__icon {
+    fill: currentColor;
   }
 }

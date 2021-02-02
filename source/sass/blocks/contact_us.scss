@@ -77,3 +77,33 @@
     stroke: $primary-orange;
   }
 }
+
+.contact-us__text {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 34px;
+  text-align: end;
+  color: $primary-black;
+  margin-bottom: 12px;
+  margin-right: 35px;
+
+  @include tablet {
+    font-size: 18px;
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.contact-us__wrapper {
+  position: relative;
+  width: 253px;
+  margin-right: 38px;
+
+  @include tablet {
+    width: 188px;
+    margin-right: 0;
+  }
+}
+
+

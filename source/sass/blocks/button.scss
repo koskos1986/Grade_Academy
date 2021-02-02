@@ -1,7 +1,8 @@
 .button {
   display: block;
+  position: relative;
   width: 288px;
-  height: 75px;
+  // height: 75px;
   padding-top: 30px;
   padding-right: 30px;
   padding-bottom: 30px;
@@ -19,9 +20,6 @@
 
   @include tablet {
     width: 250px;
-  }
-
-  @include mobile {
     height: 50px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -30,9 +28,86 @@
     line-height: 12px;
   }
 
+  @include mobile {
+    width: 288px;
+  }
+
   &:hover,
   &:focus {
       background-color: $secondary-orange;
+  }
+
+  &--link {
+    width: 340px;
+
+    @include tablet {
+      width: 250px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @include mobile {
+      width: 288px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 39px;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      display: block;
+      background-image: url("../img/icon-arrow-down.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--buy {
+    width: 250px;
+    padding-left: 39px;
+    padding-right: 39px;
+
+    @include mobile {
+      width: 288px;
+    }
+  }
+
+  &--card {
+    width: 310px;
+    padding-left: 39px;
+    padding-right: 39px;
+    margin-top: auto;
+
+    @include tablet {
+      width: 286px;
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+    }
+
+    @include mobile {
+      left: 0;
+      bottom: -3px;
+    }
+  }
+
+  &--submit {
+    width: 177px;
+    padding: 18px 40px 17px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include tablet {
+      width: 250px;
+      padding: 20px 40px 18px;
+    }
+
+    @include mobile {
+      width: 288px;
+    }
   }
 }
 
@@ -71,6 +146,7 @@
     position: absolute;
     top: 0;
     right: 0;
+    background-color: $white;
     background-image: url("../img/icon-close.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -107,41 +183,3 @@
     background-color: transparent;
   }
 }
-
-/* .button {
-  display: block;
-  width: 288px;
-  height: 50px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 30px;
-  padding-left: 40px;
-  color: $white;
-  background-color: $primary-orange;
-  font-size: 10px;
-  font-weight: 500;
-  line-height: 12px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  border: none;
-
-  cursor: pointer;
-
-  @media (min-width: $tablet-width) {
-    width: 250px;
-  }
-
-  @media (min-width: $desktop-width) {
-    height: 75px;
-    font-size: 12px;
-    line-height: 14.63px;
-    font-weight: 700;
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-
-  &:hover,
-  &:focus {
-      background-color: $secondary-orange;
-  }
-} */

@@ -5,14 +5,14 @@
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-bottom: 43px;
+  margin-bottom: 57px;
 
   @include tablet {
-    margin-bottom: 25px;
+    margin-bottom: 38px;
   }
 
   @include mobile {
-    margin-bottom: 17px;
+    margin-bottom: 30px;
   }
 }
 
@@ -90,7 +90,7 @@
 }
 
 .places__list {
-  width: 61%;
+  width: 62%;
   min-width: 767px;
   display: flex;
   flex-wrap: wrap;
