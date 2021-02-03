@@ -13,32 +13,6 @@
   <link rel="preload" href="fonts/Montserrat-SemiBold.woff" as="font">
   <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font">
   <link rel="stylesheet" href="css/style.css">
-  <!-- Pixel Glass -->
-<style>
-  HTML {
-    background-repeat: no-repeat;
-    background-position:  50% 0;
-    /* Mobile layout by default */
-    background-image: url("img/320.png");
-  }
-  /* Tablet */
-  @media ( min-width: 768px ) {
-    HTML {
-      /* Tablet layout */
-      background-image: url("img/768.png");
-    }
-  }
-  /* Desktop */
-  @media ( min-width: 1024px ) {
-    HTML {
-      /* Desktop layout */
-      background-image: url("img/1024.png");
-    }
-  }
-</style>
-<link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-<script src="../node_modules/pixel-glass/script.js"></script>
-<!--Pixel Glass -->
 </head>
 <body class="page">
   <header class="page__header header js-header">
@@ -228,28 +202,30 @@
             <p class="tabs__description-text text">В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого состояния.</p>
             <button class="tabs__description-button button" type="button">купить тур сейчас</button>
           </div>
-          <div class="tabs__photo">
-            <picture>
-              <source type="image/webp" media="(min-width:1024px)" srcset="img/tab-albania-desktop@1x.webp 1x, img/tab-albania-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width:768px)" srcset="img/tab-albania-tablet@1x.webp 1x, img/tab-albania-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/tab-albania-mobile@1x.webp 1x, img/tab-albania-mobile@2x.webp 2x">
-              <source media="(min-width:1024px)" srcset="img/tab-albania-desktop@1x.jpg 1x, img/tab-albania-desktop@2x.jpg 2x">
-              <source media="(min-width:768px)" srcset="img/tab-albania-tablet@1x.jpg 1x, img/tab-albania-tablet@2x.jpg 2x">
-              <img src="img/tab-albania-mobile@1x.jpg" srcset="img/tab-albania-mobile@2x.jpg" width="320" height="415" alt="Вид сверху на пляж в Албании">
-            </picture>
-          </div>
-          <div class="tabs__review visually-hidden">
-            <h3 class="tabs__review-title title">Отзывы</h3>
-            <blockquote class="tabs__review-item">
-              <p class="tabs__review-text text">Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с собой сестру, чтобы тоже смогла вкусить все красоты природы :)</p>
-              <div class="tabs__author">
-                <picture>
-                  <source type="image/webp" srcset="img/photo-review-2.webp">
-                  <img src="img/photo-review-2.jpg" loading="lazy" alt="Фото автора">
-                </picture>
-                <cite class="tabs__name-author">Маришка</cite>
-              </div>
-            </blockquote>
+          <div class="tabs__review-wrapper">
+            <div class="tabs__photo">
+              <picture>
+                <source type="image/webp" media="(min-width:1024px)" srcset="img/tab-albania-desktop@1x.webp 1x, img/tab-albania-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width:768px)" srcset="img/tab-albania-tablet@1x.webp 1x, img/tab-albania-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/tab-albania-mobile@1x.webp 1x, img/tab-albania-mobile@2x.webp 2x">
+                <source media="(min-width:1024px)" srcset="img/tab-albania-desktop@1x.jpg 1x, img/tab-albania-desktop@2x.jpg 2x">
+                <source media="(min-width:768px)" srcset="img/tab-albania-tablet@1x.jpg 1x, img/tab-albania-tablet@2x.jpg 2x">
+                <img src="img/tab-albania-mobile@1x.jpg" srcset="img/tab-albania-mobile@2x.jpg" width="320" height="415" alt="Вид сверху на пляж в Албании">
+              </picture>
+            </div>
+            <div class="tabs__review visually-hidden">
+              <h3 class="tabs__review-title title">Отзывы</h3>
+              <blockquote class="tabs__review-item">
+                <p class="tabs__review-text text">Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с собой сестру, чтобы тоже смогла вкусить все красоты природы :)</p>
+                <div class="tabs__author">
+                  <picture>
+                    <source type="image/webp" srcset="img/photo-review-2.webp">
+                    <img src="img/photo-review-2.jpg" loading="lazy" alt="Фото автора">
+                  </picture>
+                  <cite class="tabs__name-author">Маришка</cite>
+                </div>
+              </blockquote>
+            </div>
           </div>
         </article>
         <article class="tabs__card visually-hidden">
@@ -258,28 +234,30 @@
             <p class="tabs__description-text text">В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев Камен где находится  археологический памятник Кокино в длину около 100 метров.</p>
             <button class="tabs__description-button button" type="button">купить тур сейчас</button>
           </div>
-          <div class="tabs__photo">
-            <picture>
-              <source type="image/webp" media="(min-width:1024px)" srcset="img/tab-macedonia-desktop@1x.webp 1x, img/tab-macedonia-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width:768px)" srcset="img/tab-macedonia-tablet@1x.webp 1x, img/tab-macedonia-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/tab-macedonia-mobile@1x.webp 1x, img/tab-macedonia-mobile@2x.webp 2x">
-              <source media="(min-width:1024px)" srcset="img/tab-macedonia-desktop@1x.jpg 1x, img/tab-macedonia-desktop@2x.jpg 2x">
-              <source media="(min-width:768px)" srcset="img/tab-macedonia-tablet@1x.jpg 1x, img/tab-macedonia-tablet@2x.jpg 2x">
-              <img src="img/tab-macedonia-mobile@1x.jpg" srcset="img/tab-macedonia-mobile@2x.jpg" width="320" height="415" alt="Вид на церковь у моря в Македонии">
-            </picture>
-          </div>
-          <div class="tabs__review visually-hidden">
-            <h3 class="tabs__review-title title">Отзывы</h3>
-            <blockquote class="tabs__review-item">
-              <p class="tabs__review-text text">Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в гору был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила, особенно после долгого пути в гору.</p>
-              <div class="tabs__author">
-                <picture>
-                  <source type="image/webp" srcset="img/photo-review-3.webp">
-                  <img src="img/photo-review-3.jpg" loading="lazy" alt="Фото автора">
-                </picture>
-                <cite class="tabs__name-author">Михаил Кузьмин</cite>
-              </div>
-            </blockquote>
+          <div class="tabs__review-wrapper">
+            <div class="tabs__photo">
+              <picture>
+                <source type="image/webp" media="(min-width:1024px)" srcset="img/tab-macedonia-desktop@1x.webp 1x, img/tab-macedonia-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width:768px)" srcset="img/tab-macedonia-tablet@1x.webp 1x, img/tab-macedonia-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/tab-macedonia-mobile@1x.webp 1x, img/tab-macedonia-mobile@2x.webp 2x">
+                <source media="(min-width:1024px)" srcset="img/tab-macedonia-desktop@1x.jpg 1x, img/tab-macedonia-desktop@2x.jpg 2x">
+                <source media="(min-width:768px)" srcset="img/tab-macedonia-tablet@1x.jpg 1x, img/tab-macedonia-tablet@2x.jpg 2x">
+                <img src="img/tab-macedonia-mobile@1x.jpg" srcset="img/tab-macedonia-mobile@2x.jpg" width="320" height="415" alt="Вид на церковь у моря в Македонии">
+              </picture>
+            </div>
+            <div class="tabs__review visually-hidden">
+              <h3 class="tabs__review-title title">Отзывы</h3>
+              <blockquote class="tabs__review-item">
+                <p class="tabs__review-text text">Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в гору был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила, особенно после долгого пути в гору.</p>
+                <div class="tabs__author">
+                  <picture>
+                    <source type="image/webp" srcset="img/photo-review-3.webp">
+                    <img src="img/photo-review-3.jpg" loading="lazy" alt="Фото автора">
+                  </picture>
+                  <cite class="tabs__name-author">Михаил Кузьмин</cite>
+                </div>
+              </blockquote>
+            </div>
           </div>
         </article>
         <article class="tabs__card visually-hidden">
@@ -318,28 +296,30 @@
             <p class="tabs__description-text text">В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами —  сталактитами и сталагмитами —  формировавшимися тысячи и тысячи лет.</p>
             <button class="tabs__description-button button" type="button">купить тур сейчас</button>
           </div>
-          <div class="tabs__photo">
-            <picture>
-              <source type="image/webp" media="(min-width:1024px)" srcset="img/tab-croatia-desktop@1x.webp 1x, img/tab-croatia-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width:768px)" srcset="img/tab-croatia-tablet@1x.webp 1x, img/tab-croatia-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/tab-croatia-mobile@1x.webp 1x, img/tab-croatia-mobile@2x.webp 2x">
-              <source media="(min-width:1024px)" srcset="img/tab-croatia-desktop@1x.jpg 1x, img/tab-croatia-desktop@2x.jpg 2x">
-              <source media="(min-width:768px)" srcset="img/tab-croatia-tablet@1x.jpg 1x, img/tab-croatia-tablet@2x.jpg 2x">
-              <img src="img/tab-croatia-mobile@1x.jpg" srcset="img/tab-croatia-mobile@2x.jpg" width="320" height="415" alt="Вид пещеры в Хорватии">
-            </picture>
-          </div>
-          <div class="tabs__review visually-hidden">
-            <h3 class="tabs__review-title title">Отзывы</h3>
-            <blockquote class="tabs__review-item">
-              <p class="tabs__review-text text">Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема! А то, что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни с чем не спутать по итогу :)</p>
-              <div class="tabs__author">
-                <picture>
-                  <source type="image/webp" srcset="img/photo-review-5.webp">
-                  <img src="img/photo-review-5.jpg" loading="lazy" alt="Фото автора">
-                </picture>
-                <cite class="tabs__name-author">Владимир Муцилин</cite>
-              </div>
-            </blockquote>
+          <div class="tabs__review-wrapper">
+            <div class="tabs__photo">
+              <picture>
+                <source type="image/webp" media="(min-width:1024px)" srcset="img/tab-croatia-desktop@1x.webp 1x, img/tab-croatia-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width:768px)" srcset="img/tab-croatia-tablet@1x.webp 1x, img/tab-croatia-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/tab-croatia-mobile@1x.webp 1x, img/tab-croatia-mobile@2x.webp 2x">
+                <source media="(min-width:1024px)" srcset="img/tab-croatia-desktop@1x.jpg 1x, img/tab-croatia-desktop@2x.jpg 2x">
+                <source media="(min-width:768px)" srcset="img/tab-croatia-tablet@1x.jpg 1x, img/tab-croatia-tablet@2x.jpg 2x">
+                <img src="img/tab-croatia-mobile@1x.jpg" srcset="img/tab-croatia-mobile@2x.jpg" width="320" height="415" alt="Вид пещеры в Хорватии">
+              </picture>
+            </div>
+            <div class="tabs__review visually-hidden">
+              <h3 class="tabs__review-title title">Отзывы</h3>
+              <blockquote class="tabs__review-item">
+                <p class="tabs__review-text text">Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема! А то, что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни с чем не спутать по итогу :)</p>
+                <div class="tabs__author">
+                  <picture>
+                    <source type="image/webp" srcset="img/photo-review-5.webp">
+                    <img src="img/photo-review-5.jpg" loading="lazy" alt="Фото автора">
+                  </picture>
+                  <cite class="tabs__name-author">Владимир Муцилин</cite>
+                </div>
+              </blockquote>
+            </div>
           </div>
         </article>
       </div>
@@ -464,50 +444,91 @@
     </section>
   </main>
   <footer class="page__footer footer">
-    <section class="footer__trips trips footer__container">
-      <h2 class="trips__header footer__header title">Следующие путешествия</h2>
-      <div class="trips__lists-wrapper">
-        <ul class="trips__list list">
-          <li class="trips__list-item">Марсель</li>
-          <li class="trips__list-item">Ним</li>
-          <li class="trips__list-item">Монпелье</li>
-          <li class="trips__list-item">Барселона</li>
-          <li class="trips__list-item">Пальма</li>
+    <div class="footer__wrapper">
+      <section class="footer__container footer__container--travel">
+        <h2 class="footer__title title">Следующие путешествия</h2>
+        <div class="footer__list-wrapper">
+          <ul class="footer__list list">
+            <li class="footer__item">
+              <p class="footer__text text">Марсель</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__text text">Ним</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__text text">Монпелье</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__text text">Барселона</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__text text">Пальма</p>
+            </li>
+          </ul>
+          <ul class="footer__list footer__list--second list">
+            <li class="footer__item">
+              <p class="footer__text text">Сардиния</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__text text">Палермо</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__text text">Катания</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__text text">Неаполь</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__text text">Рим</p>
+            </li>
+          </ul>
+          <ul class="footer__list list">
+            <li class="footer__item">
+              <p class="footer__text text">Корс</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__text text">Ницца</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__text text">Монако</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__text text">Динь-ле-Бен</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__text text">Гренобль</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="footer__container footer__container--contacts">
+        <h2 class="footer__title title">Наши контакты</h2>
+        <ul class="footer__list footer__list--contacts list">
+          <li class="footer__item footer__item--contacts">
+            <a class="footer__email" href="mailto:puteshestviemechta@gmail.ru">
+              <span class="footer__email-email">puteshestviemechta@gmail.ru</span>
+              <span class="footer__email-text">Почта</span>
+            </a>
+            <svg class="footer__icon footer__icon--email" width="26" height="20">
+              <use xlink:href="img/sprite.svg#icon-email"></use>
+            </svg>
+          </li>
+          <li class="footer__item footer__item--contacts">
+            <a class="footer__tel" href="tel:+749978468446">+7 (499) -784-684-46</a>
+            <svg class="footer__icon footer__icon--phone" width="30" height="30">
+              <use xlink:href="img/sprite.svg#icon-phone"></use>
+            </svg>
+          </li>
         </ul>
-        <ul class="trips__list list">
-          <li class="trips__list-item">Сардиния</li>
-          <li class="trips__list-item">Палермо</li>
-          <li class="trips__list-item">Катания</li>
-          <li class="trips__list-item">Неаполь</li>
-          <li class="trips__list-item">Рим</li>
-        </ul>
-        <ul class="trips__list list">
-          <li class="trips__list-item">Корс</li>
-          <li class="trips__list-item">Ницца</li>
-          <li class="trips__list-item">Монако</li>
-          <li class="trips__list-item">Динь-ле-Бен</li>
-          <li class="trips__list-item">Гренобль</li>
-        </ul>
-      </div>
-    </section>
-    <section class="footer__contacts contacts footer__container">
-      <h2 class="contacts__header footer__header title">Наши контакты</h2>
-      <svg class="contacts__mail-icon"  width="26" height="20">
-        <use xlink:href="img/sprite.svg#icon-email"></use>
-      </svg>
-      <a class="contacts__mail" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
-      <svg class="contacts__phone-icon" width="30" height="30">
-        <use xlink:href="img/sprite.svg#icon-phone"></use>
-      </svg>
-      <a href="tel:+749978468446" class="contacts__phone">+7 (499) -784-684-46</a>
-    </section>
-    <section class="footer__corporate corporate footer__container">
-      <h2 class="corporate__header footer__header title">Корпоративные путешествия</h2>
-      <p class="corporate__text text">Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают компанию, помогают поддерживать корпоративный дух, а также являются оличным времяпрепровождением</p>
-    </section>
+      </section>
+      <section class="footer__container footer__container--extra">
+        <h2 class="footer__title footer__title--extra title">Корпоративные путешествия</h2>
+        <p class="footer__text footer__text--extra text">Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают компанию,&nbsp;помогают поддерживать корпоративный дух, а также являются оличным времяпрепровождением</p>
+      </section>
+    </div>
   </footer>
 
-  <div class="popup popup-js">
+  <div class="popup popup-js visually-hidden">
     <div class="popup__image">
       <picture>
         <source type="image/webp" srcset="img/bg-modal-desktop@1x.webp, img/bg-modal-desktop@2x.webp 2x">
@@ -530,7 +551,7 @@
   </div>
 
   <div class="success visually-hidden">
-    <button class="success__button button-close">
+    <button class="success__button success-close">
       <svg class="success__close-icon" width="30" height="30" viewbox="0 0 30 30">
         <use xlink:href="img/sprite.svg#icon-close"></use>
       </svg>

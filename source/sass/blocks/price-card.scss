@@ -64,16 +64,16 @@
 }
 
 .price-card__title {
-  font-weight: 600;
+  font-weight: $semi-bold;
   font-size: 28px;
   line-height: 34px;
   color: $text-dark-05;
 
   @include tablet {
+    margin-bottom: 7px;
     font-size: 24px;
     line-height: 38px;
     text-align: center;
-    margin-bottom: 7px;
   }
 
   &--economy {
@@ -94,15 +94,15 @@
 }
 
 .price-card__text {
-  line-height: 24px;
   padding-right: 19px;
   margin-bottom: 27px;
+  line-height: 24px;
   color: $primary-black;
 
   @include tablet {
-    text-align: center;
     padding-right: 0;
     margin-bottom: 8px;
+    text-align: center;
   }
 }
 

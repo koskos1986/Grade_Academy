@@ -22,7 +22,6 @@
   @include tablet {
     width: 100%;
   }
-
 }
 
 .header__top {
@@ -81,7 +80,6 @@
 
 .header__logo {
   line-height: 0;
-  // padding-left: 375px;
 
   @include tablet {
     margin-top: 4px;

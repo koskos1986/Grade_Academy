@@ -36,9 +36,9 @@
 
   @include tablet {
     width: 100%;
-    background-color: $background-secondary;
     margin-right: 0;
     margin-bottom: 30px;
+    background-color: $background-secondary;
   }
 }
 
@@ -51,10 +51,10 @@
     position: relative;
     width: 100%;
     display: block;
+    padding: 17px 50px 17px 35px;
     color: $mobile-menu-text;
     font-size: 20px;
-    line-height: 28px;
-    padding: 17px 50px 17px 35px;
+    line-height: $line-height;
 
     &::after {
       position: absolute;

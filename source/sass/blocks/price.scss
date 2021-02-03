@@ -50,17 +50,17 @@
 }
 
 .price__title {
+  margin-bottom: 31px;
   font-weight: $semi-bold;
   font-size: 55px;
   line-height: 90px;
   color: $primary-black;
-  margin-bottom: 31px;
 
   @include tablet {
+    margin-bottom: 20px;
     font-size: 30px;
     line-height: 45px;
     text-align: center;
-    margin-bottom: 20px;
   }
 
   @include mobile {
@@ -83,13 +83,13 @@
 }
 
 .price__text {
+  margin-bottom: 60px;
   line-height: 27px;
   color: $text-dark-07;
-  margin-bottom: 60px;
 
   @include tablet {
-    text-align: center;
     margin-bottom: 33px;
+    text-align: center;
   }
 
   @include mobile {

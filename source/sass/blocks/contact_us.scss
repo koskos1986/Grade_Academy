@@ -42,28 +42,28 @@
 
 .contact-us__tel {
   width: 227px;
+  padding-left: 39px;
   color: $primary-black;
   font-size: 18px;
   line-height: 32px;
   text-decoration: underline;
-  padding-left: 39px;
 
   &--prices {
     width: 248px;
+    padding-left: 44px;
     font-size: 20px;
     line-height: 32px;
     color: $primary-black;
-    padding-left: 44px;
     text-decoration: none;
 
     @include tablet {
       width: 188px;
+      padding-left: 0;
+      margin-right: 0;
       font-size: 18px;
       text-align: center;
       text-decoration: underline;
       color: $primary-orange;
-      padding-left: 0;
-      margin-right: 0;
     }
   }
 
@@ -79,19 +79,19 @@
 }
 
 .contact-us__text {
-  font-weight: 500;
+  margin-bottom: 12px;
+  margin-right: 35px;
+  font-weight: $medium;
   font-size: 22px;
   line-height: 34px;
   text-align: end;
   color: $primary-black;
-  margin-bottom: 12px;
-  margin-right: 35px;
 
   @include tablet {
-    font-size: 18px;
-    text-align: center;
     margin-right: 0;
     margin-bottom: 10px;
+    font-size: 18px;
+    text-align: center;
   }
 }
 

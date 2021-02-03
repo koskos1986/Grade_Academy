@@ -136,12 +136,12 @@
   margin-bottom: 30px;
 
   @include tablet {
-    font-weight: 600;
+    font-weight: $semi-bold;
+    margin-bottom: 20px;
     font-size: 30px;
     line-height: 45px;
     letter-spacing: normal;
     text-align: center;
-    margin-bottom: 20px;
   }
 
   @include mobile {
@@ -154,8 +154,8 @@
     display: block;
     width: 46.8%;
     height: 4px;
-    background-color: $primary-orange;
     margin-top: 13px;
+    background-color: $primary-orange;
 
     @include tablet {
       display: none;
@@ -168,11 +168,10 @@
   margin-bottom: 49px;
   letter-spacing: -0.47px;
   color: $primary-black;
-  // overflow: scroll;
 
   @include tablet {
-    text-align: center;
     margin-bottom: 19px;
+    text-align: center;
   }
 }
 
@@ -235,7 +234,7 @@
 }
 
 .tabs__review-title {
-  font-weight: 500;
+  font-weight: $medium;
   font-size: 30px;
   line-height: 37px;
   letter-spacing: -0.69px;
@@ -273,7 +272,7 @@
 .tabs__review-text {
   max-height: 250px;
   font-size: 14px;
-  letter-spacing: -0.408333px;
+  letter-spacing: -0.4083px;
   color: $text-dark-07;
   margin-bottom: 31px;
   overflow: scroll;

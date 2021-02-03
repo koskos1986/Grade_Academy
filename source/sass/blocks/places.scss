@@ -43,26 +43,26 @@
 
 .places__header {
   width: 328px;
+  margin-bottom: 31px;
   font-weight: $semi-bold;
   font-size: 55px;
   line-height: 80px;
   letter-spacing: -1.25px;
   color: $primary-black;
-  margin-bottom: 31px;
 
   @include tablet {
+    margin-bottom: 21px;
     font-size: 30px;
     line-height: 45px;
     letter-spacing: normal;
-    margin-bottom: 21px;
     text-align: center;
   }
 
   @include mobile {
     width: 288px;
+    margin-bottom: 20px;
     font-size: 24px;
     line-height: 36px;
-    margin-bottom: 20px;
   }
 
   &::after {
@@ -70,8 +70,8 @@
     display: block;
     width: 70.09%;
     height: 4px;
-    background-color: $primary-orange;
     margin-top: 29px;
+    background-color: $primary-orange;
 
     @include tablet {
       display: none;
@@ -116,7 +116,6 @@
   width: 350px;
   margin-bottom: 20px;
 
-  // Ребята, простите, но я жулик
   @media (min-width: 1920px) and (max-width: 1920px) {
     &:nth-child(4) {
       margin-left: 112px;
@@ -145,10 +144,10 @@
 }
 
 .places__photo-wrapper {
+  position: relative;
   display: block;
   min-height: 100%;
   line-height: 0;
-  position: relative;
 }
 
 .places__title {

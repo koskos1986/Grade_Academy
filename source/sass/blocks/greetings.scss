@@ -1,194 +1,15 @@
-/*.greetings {
-  max-width: 100%;
-  min-height: 235px;
-  background-color: $white;
-  background-image: url("../img/bg-greetings-mobile@1x.jpg"), linear-gradient(to right top, $bground-greetings-gradient-from, $bground-greetings-gradient-to);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  @media (min-width: $tablet-width) {
-    min-height: 384px;
-    background-image: url("../img/bg-greetings-tablet@1x.jpg");
-  }
-
-  @media (min-width: $desktop-width) {
-    min-height: 860px;
-    background-image: url("../img/bg-greetings-desktop@1x.jpg");
-  }
-}
-
-.greetings__wrapper {
-
-} */
-/*
-.greetings {
-  width: 100%;
-  min-height: 235px;
-
-  display: flex;
-  flex-direction: column;
-  background-image: none;
-  // background-color: $background-image-color;
-  background-position: center;
-  background-size: cover;
-  padding-top: 0;
-  margin-bottom: 90px;
-  padding-bottom: 10px;
-
-  // @include retina {
-    // background-image: url("../img/jpg/bg-main-desktop@2x.jpg");
-  // }
-
-  @media (min-width: $tablet-width) {
-    min-height: 344px;
-    padding-top: 60px;
-    background-image: url("../img/bg-greetings-tablet@1x.jpg"), linear-gradient(to right top, $bground-greetings-gradient-from, $bground-greetings-gradient-to);
-    margin-bottom: 70px;
-
-    // @include retina {
-      // background-image: url("../img/jpg/bg-main-tablet@2x.jpg");
-    // }
-  }
-
-  @media (min-width: $desktop-width) {
-    min-height: 860px;
-    background-image: url("../img/bg-greetings-desktop@1x.jpg"), linear-gradient(to right top, $bground-greetings-gradient-from, $bground-greetings-gradient-to);
-    // background-color: transparent;
-    padding-top: 186px;
-    margin-bottom: 190px;
-  }
-}
-
-.greetings__wrapper {
-  width: 390px;
-  margin-right: 23.7%;
-  margin-left: auto;
-
-  @media (min-width: $tablet-width) {
-    width: 54.2%;
-    margin-right: auto;
-  }
-
-  &--down {
-    @media (min-width: $mobile-width) {
-      width: 90%;
-    }
-  }
-
-}
-
-.greetings__wrapper--up {
-  @media (min-width: $mobile-width) {
-    width: 100%;
-    min-height: 235px;
-    background-image: url("../img/bg-greetings-mobile@1x.jpg"), linear-gradient(to right top, $bground-greetings-gradient-from, $bground-greetings-gradient-to);
-    // background-color: $background-image-color;
-    background-position: center;
-    background-size: cover;
-    padding-top: 82px;
-    padding-bottom: 81px;
-    margin-bottom: 20px;
-
-    // @include retina {
-      // background-image: url("../img/jpg/bg-main-mobile@2x.jpg");
-    // }
-  }
-}
-
-.greetings__title {
-  width: 217px;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 36px;
-  text-align: center;
-  margin-right: auto;
-  margin-left: auto;
-  // padding-left: 6px;
-  color: $white;
-
-  @media (min-width: $tablet-width) {
-    width: 400px;
-    font-size: 30px;
-    line-height: 45px;
-    padding-top: 60px;
-    margin-bottom: 15px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 412px;
-    font-size: 55px;
-    line-height: 80px;
-    padding-top: 185px;
-    margin-bottom: 30px;
-    letter-spacing: -1.11px;
-    text-align: left;
-  }
-}
-
-.greetings__text {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 27px;
-  letter-spacing: -0.5;
-  text-align: center;
-  margin-bottom: 20px;
-
-  @media (min-width: $tablet-width) {
-  color: $white;
-  margin-bottom: 15px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 39px;
-    text-align: left;
-  }
-}
-
-.greetings__link {
-  text-align: left;
-
-  @media (min-width: $desktop-width) {
-      width: 340px;
-  }
-
-  &::after {
-      position: absolute;
-      display: block;
-      width: 14px;
-      height: 14px;
-      margin-left: 193px;
-      margin-top: -13px;
-
-      content: "";
-
-      background-image: url("../img/icon-arrow-down.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-
-      @media (min-width: $tablet-width) {
-          margin-left: 156px;
-      }
-
-      @media (min-width: $desktop-width) {
-          margin-left: 206px;
-      }
-  }
-}
-*/
-
 .greetings {
   width: 100%;
   min-height: 860px;
   display: flex;
   flex-direction: column;
-  background-image: url("../img/bg-greetings-desktop@1x.jpg");
-  // background-color: $background-image-color;
-  background-position: center;
-  background-size: cover;
   padding-top: 186px;
   padding-bottom: 10px;
   margin-bottom: 190px;
+  background-image: url("../img/bg-greetings-desktop@1x.jpg");
+  background-color: $background-image-color;
+  background-position: center;
+  background-size: cover;
 
   @include retina {
     background-image: url("../img/bg-greetings-desktop@2x.jpg");
@@ -197,8 +18,8 @@
   @include tablet {
     min-height: 344px;
     padding-top: 60px;
-    background-image: url("../img/bg-greetings-tablet@1x.jpg");
     margin-bottom: 70px;
+    background-image: url("../img/bg-greetings-tablet@1x.jpg");
 
     @include retina {
       background-image: url("../img/bg-greetings-tablet@2x.jpg");
@@ -207,10 +28,10 @@
 
   @include mobile {
     min-height: auto;
-    background-image: none;
-    background-color: transparent;
     padding-top: 0;
     margin-bottom: 90px;
+    background-image: none;
+    background-color: transparent;
   }
 }
 
@@ -228,13 +49,13 @@
     @include mobile {
       width: 100%;
       min-height: 235px;
-      background-image: url("../img/bg-greetings-mobile@1x.jpg");
-      // background-color: $background-image-color;
-      background-position: center;
-      background-size: cover;
       padding-top: 82px;
       padding-bottom: 81px;
       margin-bottom: 20px;
+      background-image: url("../img/bg-greetings-mobile@1x.jpg");
+      background-color: $background-image-color;
+      background-position: center;
+      background-size: cover;
 
       @include retina {
         background-image: url("../img/bg-greetings-mobile@2x.jpg");
@@ -254,7 +75,7 @@
   font-weight: $semi-bold;
   font-size: 55px;
   line-height: 80px;
-  letter-spacing: -1.10667px;
+  letter-spacing: -1.107px;
   color: $white;
 
   @include tablet {
@@ -296,37 +117,3 @@
     color: $primary-black;
   }
 }
-
-/* .greetings__link {
-  margin-right: auto;
-  margin-left: auto;
-  text-align: left;
-
-  @media (min-width: $desktop-width) {
-    width: 340px;
-    margin: 0;
-  }
-
-  &::after {
-      position: absolute;
-      display: block;
-      width: 14px;
-      height: 14px;
-      margin-left: 193px;
-      margin-top: -13px;
-
-      content: "";
-
-      background-image: url("../img/icon-arrow-down.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-
-      @media (min-width: $tablet-width) {
-          margin-left: 156px;
-      }
-
-      @media (min-width: $desktop-width) {
-          margin-left: 206px;
-      }
-  }
-} */
